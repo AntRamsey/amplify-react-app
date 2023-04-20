@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { API } from 'aws-amplify';
 import './App.css';
+import { GitHubBornOn } from './GitHubBornOn';
 
 const App = () => {
   // Create coins variable and set to empty array
@@ -13,6 +13,9 @@ const App = () => {
 
   // Create a variable for loading
   const [loading, updateLoading] = useState(true);
+
+  // Create variable to hold user data
+  const [user, updateUser] = useState({});
 
   // Create a new function to allow users to update the input values
   function updateInputValues(type, value) {
@@ -28,9 +31,19 @@ const App = () => {
     updateLoading(false);
   }
 
+  const fetchUser = async() => {
+    const data = await API.get('cryptoapi', '/born');
+    updateUser(data.born);
+  }
+  console.log(user);
+
   // Call fetchCoins function when component loads
   useEffect(() => {
     fetchCoins()
+  }, [])
+
+  useEffect(() => {
+    fetchUser()
   }, [])
 
   return (
@@ -55,6 +68,7 @@ const App = () => {
           </div>
         ))
       }
+      <GitHubBornOn user={user}/>
     </div>
   );
 }
