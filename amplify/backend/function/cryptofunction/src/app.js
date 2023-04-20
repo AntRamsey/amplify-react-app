@@ -47,7 +47,17 @@ app.get('/coins', function(req, res) {
       res.json({  coins: response.data.data })
     })
     .catch(err => res.json({ error: err }))
-})
+});
+
+app.get('/born', function(req, res) {
+  let apiUrl = 'https://api.github.com/users/antramsey'
+
+  axios.get(apiUrl)
+    .then(response => {
+      res.json({born: response.data.created_at})
+    })
+    .catch(err => res.json({ error: err }))
+});
 
 /**********************
  * Example get method *
