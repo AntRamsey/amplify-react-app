@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/amplify-react-app/static/css/main.073c9b0a.css",
-    "main.js": "/amplify-react-app/static/js/main.7fb31524.js",
+    "main.js": "/amplify-react-app/static/js/main.ca3ca359.js",
     "static/js/787.179bae72.chunk.js": "/amplify-react-app/static/js/787.179bae72.chunk.js",
-    "static/media/logo.svg": "/amplify-react-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/amplify-react-app/index.html",
     "main.073c9b0a.css.map": "/amplify-react-app/static/css/main.073c9b0a.css.map",
-    "main.7fb31524.js.map": "/amplify-react-app/static/js/main.7fb31524.js.map",
+    "main.ca3ca359.js.map": "/amplify-react-app/static/js/main.ca3ca359.js.map",
     "787.179bae72.chunk.js.map": "/amplify-react-app/static/js/787.179bae72.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.7fb31524.js"
+    "static/js/main.ca3ca359.js"
   ]
 }
